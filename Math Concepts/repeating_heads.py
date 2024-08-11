@@ -26,4 +26,5 @@ def repeating_heads(n, x):
     # payout > 100 / prob_winning_bet_atleast_once
     winning_payout = bet_amount / prob_winning_bet_atleast_once
     
+    
     return [prob_winning_bet_atleast_once * 100, winning_payout]

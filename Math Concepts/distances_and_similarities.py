@@ -12,7 +12,7 @@ class Metrics:
         '''
         X = [x1, x2]
         Y = [y1, y2]
-        manhattan_dist = |x1 - y1| + |x2 - y2|
+        manh_dist = |x1 - y1| + |x2 - y2|
         '''
         manh_dist = sum([abs(x - y) for x, y in zip(X, Y)])
         return round(manh_dist, 4)

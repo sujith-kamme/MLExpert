@@ -15,7 +15,7 @@ def repeating_heads(n, x):
     #1. Calculating probability of winning the bet atleast once
     #   prob_winning_bet_atleast_once = 1- (1 - 0.5** n)** x
     bet_amount = 100
-    prob_heads_one_flip = 1/2 #fair coin
+    prob_heads_one_flip = 1/2 #given fair coin
     prob_winning_bet = prob_heads_one_flip ** n
     prob_losing_bet = 1 - prob_winning_bet
     prob_losing_bet_xtimes = prob_losing_bet ** x
@@ -26,5 +26,5 @@ def repeating_heads(n, x):
     # payout > 100 / prob_winning_bet_atleast_once
     winning_payout = bet_amount / prob_winning_bet_atleast_once
     
-    
+
     return [prob_winning_bet_atleast_once * 100, winning_payout]

@@ -5,10 +5,8 @@ class Centroid:
         self.location = location
         self.closest_users = set()
 
-
 def get_manhattan_distance(feature_1, feature_2):
     return sum([abs(x - y) for x, y in zip(feature_1, feature_2)])
-
 
 def get_average_new_centroids(centroid, user_feature_map, num_features_per_user):
     closest_uid_features = []
@@ -24,7 +22,7 @@ def get_average_new_centroids(centroid, user_feature_map, num_features_per_user)
     return new_centroid_features
     
 def get_k_means(user_feature_map, num_features_per_user, k):
-    random.seed(42)
+    random.seed(123)
     initial_centroid_users = random.sample(sorted(list(user_feature_map.keys())), k)
 
     centroids = []
